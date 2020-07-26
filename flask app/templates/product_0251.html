@@ -1,0 +1,59 @@
+{%extends "layout.html" %}
+{% block sub_content %}
+<div class="text-center">
+  <h1> Product Analysis for Product-1 </h1>
+<form action="{{ url_for('product0251')}}" class="form-horizontal" method="POST">
+
+  <div class="form-group">
+    <label class="control-label col-sm-2">Number of days for demand prediction</label>
+    <div class="col-sm-5">
+      <input type="text" name="daysprediction"/>
+    </div>
+  </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2">Select day for order analysis</label>
+      <div class="col-sm-5">
+        <input type="text" name="eoqprediction"/>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label class="control-label col-sm-2">Order Cost</label>
+      <div class="col-sm-5">
+        <input type="number" name="ordercost"/>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label class="control-label col-sm-2">Holding Cost</label>
+      <div class="col-sm-5">
+        <input type="text" name="holdingcost"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2">Product Cost</label>
+      <div class="col-sm-5">
+        <input type="text" name="productcost"/>
+      </div>
+    </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="Submit" >Submit </button>
+    </div>
+  </div>
+</form>
+    
+     <br>
+     <br>
+     <br>
+     <br> 
+    
+   <h3> {{ demandPredict }}</br></h3> 
+   <h3> {{Day}}</br></h3> 
+   <h3> {{ QO }}</br></h3> 
+   <h3> {{ CT }}</br></h3> 
+    </br>        
+{% endblock %}    

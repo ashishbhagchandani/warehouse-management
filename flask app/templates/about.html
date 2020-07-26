@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+{% block sub_content %}  
+<center><strong><h1>Overview</h1><strong></center>
+<p><h3>The primary target of the system is to help in making predictions for the 
+perishable goods in a general warehouse. The two possiblities which are major 
+source of problems,</h3></p>
+<ul>
+<li>
+<h3>Understocking</h3>
+</li>
+<li>
+<h3>Overstocking</h3>
+</li>
+</ul>
+<p><h3>The above two possiblities can be managed with utmost supervision of demand
+and order.</p></h3>
+<br>
+<br>
+<center><strong><h1>Focus Area</h1><strong></center>
+  <strong><h2>Demand:</h2><strong>
+    <ul>
+    <li>
+    <h3>The project main focus is on demand prediction for perishable goods.</h3>
+    </li>
+    <li>
+    <h3>The model used to predict perishable goods demand is CNNLSTM (Convolution 
+    Neural Network with Long Short Term Memory).</h3>
+    </li>
+    </ul>
+<br>
+  <strong><h2>Order:</h2><strong>
+    <ul>
+    <li>
+    <h3>The predicted demand is then used to predict the order quantity and order cycle.</h3>
+    </li>
+    <li>
+    <h3>The model used to predict perishable goods order quantity and cycle is
+    EOQ (Economic Order Quantity).</h3>
+    </li>
+    </ul>
+<br>
+<br>
+<center><strong><h1>Analysis</h1><strong></center>
+<p><h3> The project also involves visual analysis of the predicted items.</p></h3>
+    <ul>
+    <li>
+    <h3>Predicted Demand - N Days graph</h3>
+    </li>
+    <li>
+    <h3>Predicted Order quantity - N Days graph</h3>
+    </li>
+     <li>
+    <h3>Predicted Order Cycle - N Days graph</h3>
+    </li>
+    </ul>
+    <p><h4>Where N is the number of days on which prediction has been performed.</p></h4>
+{% endblock %}    

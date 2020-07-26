@@ -1,0 +1,4 @@
+applications:
+- name: ibm-flask
+  random-route: true
+  memory: 2048M
